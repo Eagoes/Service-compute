@@ -1,0 +1,1 @@
+replace into `car_rental`(carPlate,carBrand,carName,cartype,rentalLoc,returnLoc,carRemaining,carPrice) values("Jing-AL0000","BMW","C300L",0,"Beijing","Beijing",5,300);

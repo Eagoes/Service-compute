@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
+		<title>Advice For User BY Travel-proxy</title>
+
+		<link rel="stylesheet" type="text/css" th:href=@{/css/timeline.css} href="../static/css/timeline.css" />
+		<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="page-header">
+				<h1 id="timeline">Travel Agent Suggest Result</h1>
+			</div>
+			<ul class="timeline">
+				<li>
+				  <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+				  <div class="timeline-panel">
+					<div class="timeline-heading">
+					  <h4 class="timeline-title">Departure Airline</h4>
+					</div>
+					<div class="timeline-body">
+					  <p th:utext="${departure_airline_message}">Your Depature Airline is</p>
+					</div>
+				  </div>
+				</li>
+				<li class="timeline-inverted">
+				  <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+				  <div class="timeline-panel">
+					<div class="timeline-heading">
+					  <h4 class="timeline-title">Return Airline</h4>
+					</div>
+					<div class="timeline-body">
+					  <p th:utext="${return_airline_message}">Your Return Airline is</p>
+					</div>
+				  </div>
+				</li>
+				<li>
+				  <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+				  <div class="timeline-panel">
+					<div class="timeline-heading">
+					  <h4 class="timeline-title">Hotel</h4>
+					</div>
+					<div class="timeline-body">
+					  <p th:utext="${hotel_message}">Your Hotel is</p>
+					</div>
+				  </div>
+				</li>
+				<li class="timeline-inverted">
+				  <div class="timeline-panel">
+					<div class="timeline-heading">
+					  <h4 class="timeline-title">Car Rental</h4>
+					</div>
+					<div class="timeline-body">
+					  <p th:utext="${car_message}">Yur Car Rental is</p>
+					</div>
+				  </div>
+				</li>
+				<li>
+				  <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
+				  <div class="timeline-panel">
+					<div class="timeline-heading">
+					  <h4 class="timeline-title">Attraction</h4>
+					</div>
+					<div class="timeline-body">
+					  <p th:utext="${attraction_message}">Your Attraction is</p>
+					  <hr>
+					</div>
+				  </div>
+				</li>
+				<li>
+				  <div class="timeline-panel">
+					<div class="timeline-heading">
+					  <h4 class="timeline-title">Guide</h4>
+					</div>
+					<div class="timeline-body">
+					  <p th:utext="${guide_message}">Your Guide is</p>
+					</div>
+				  </div>
+				</li>
+				<li class="timeline-inverted">
+				  <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+				  <div class="timeline-panel">
+					<div class="timeline-heading">
+					  <h4 class="timeline-title">Cost</h4>
+					</div>
+					<div class="timeline-body">
+					  <p th:utext="${cost}">Your Cost is</p>
+					</div>
+				  </div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

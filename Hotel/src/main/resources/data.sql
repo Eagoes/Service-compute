@@ -1,0 +1,1 @@
+replace into `hotels`(hotelId,hotelName,hotelPhone,hotelState,hotelCity,hotelAddress,appintmentTime,hotelRemaining,hotelStar,hotelComment,hotelPrice) values(67,"Home Inn","6767","Beijing","Beijing","Haidian","2018-12-12",5,9,100,3);

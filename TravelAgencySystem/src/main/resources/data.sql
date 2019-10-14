@@ -1,0 +1,1 @@
+replace into `nouser` value("zbx");
