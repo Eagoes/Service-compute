@@ -63,7 +63,7 @@ public class AirlineController {
 	}
 	
 	@RequestMapping(value = "getLast3MinPriceAirline", method = RequestMethod.GET)
-	public @ResponseBody List<Airline> getLast3MinPriceAirline(@RequestParam("depatureTime") String departureTime, @RequestParam("departure") String departure, @RequestParam("destination") String destination) {
+	public @ResponseBody List<Airline> getLast3MinPriceAirline(@RequestParam("departureTime") String departureTime, @RequestParam("departure") String departure, @RequestParam("destination") String destination) {
 		List<Airline> airlineList = airlineService.getLastNMinPriceAirline(departureTime, departure, destination, 3);
 		return airlineList;
 	}
@@ -76,10 +76,12 @@ public class AirlineController {
 	@RequestMapping(value = "getAllAirline", method = RequestMethod.GET)
     public @ResponseBody String getAllAirline() {
 	    List<Airline> allAirline = airlineService.findAll();
+	    System.out.println("Airline Size: ".concat(String.valueOf(allAirline.size())));
 	    String returnString = new String();
         for (Airline airline: allAirline) {
-            returnString.concat(airline.toString());
+            returnString += airline.toString();
         }
+        System.out.println(returnString);
         return returnString;
     }
 	

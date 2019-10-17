@@ -22,6 +22,10 @@ public class Airline {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "airlineid")
     private long id;
+
+    @Column(name = "airlineName")
+    @NotEmpty(message = "*Please provide airline name")
+    private String name;
     
 	@Column(name = "departure")
     @NotEmpty(message = "*Please provide airline departure")
@@ -126,5 +130,9 @@ public class Airline {
 		return status;
 	}
 
-	public long getAirlineInfoId() {return id; }
+
+	public long getAirlineId() {return id; }
+
+	public String getAirlineName() { return name; }
+	public void setAirlineName(String name) { this.name = name; }
 }

@@ -31,8 +31,8 @@
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页  <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 
 <article class="page-container">
-	<form form class="form form-horizontal" id="form-article-add"  id="form--add" th:action="@{/usr-query.html}"
-                  th:object="${userrequest}" method="post" action="#">
+	<form form class="form form-horizontal" id="form-article-add"  id="form--add" th:action="@{/result-list.html}"
+                  th:object="${userrequest}" method="get" action="#">
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>目的地：</label>
 
@@ -65,13 +65,6 @@
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>预算(元)：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<input type="text" th:field="*{cost}"  class="input-text" value="" placeholder="" id="money" name="money" required>
-			</div>
-		</div>
-
-        <div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>尊享游(元)：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" th:field="*{option}"  class="input-text" value="" placeholder="" id="money" name="money" required>
 			</div>
 		</div>
 

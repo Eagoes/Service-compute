@@ -153,6 +153,7 @@ public class LoginController {
     public ModelAndView createNewUser(@Valid User user, BindingResult bindingResult) {
         ModelAndView modelAndView = new ModelAndView();
         User userExists = userService.findUserByEmail(user.getEmail());
+        System.out.println(user.getName());
         if (userExists != null) {
             bindingResult
                     .rejectValue("email", "error.user",

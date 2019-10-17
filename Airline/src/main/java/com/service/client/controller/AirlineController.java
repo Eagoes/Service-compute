@@ -63,7 +63,7 @@ public class AirlineController {
 	}
 	
 	@RequestMapping(value = "getLast3MinPriceAirline", method = RequestMethod.GET)
-	public @ResponseBody List<Airline> getLast3MinPriceAirline(@RequestParam("depatureTime") String departureTime, @RequestParam("departure") String departure, @RequestParam("destination") String destination) {
+	public @ResponseBody List<Airline> getLast3MinPriceAirline(@RequestParam("departureTime") String departureTime, @RequestParam("departure") String departure, @RequestParam("destination") String destination) {
 		List<Airline> airlineList = airlineService.getLastNMinPriceAirline(departureTime, departure, destination, 3);
 		return airlineList;
 	}

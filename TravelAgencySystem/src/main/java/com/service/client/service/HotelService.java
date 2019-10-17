@@ -33,4 +33,20 @@ public class HotelService {
 		else
 			return hotellist.get(0);
 	}
+	
+	public Hotel findBestHotelByCity(String city) {
+		List<Hotel> hotellist = hotelRepository.findByHotelCityOrderByHotelStar(city);
+		if(hotellist.size()==0)
+			return null;
+		else
+			return hotellist.get(0);
+	}
+
+	public List<Hotel> findHotelByCityInOrder(String city) {
+		return hotelRepository.findByHotelCityOrderByHotelStar(city);
+	}
+
+	public Hotel findHotelById(long id) {
+		return hotelRepository.findById(id);
+	}
 }

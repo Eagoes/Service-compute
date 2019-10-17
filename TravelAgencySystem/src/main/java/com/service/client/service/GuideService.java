@@ -27,11 +27,20 @@ public class GuideService {
 		return guideRepository.save(guide);
 	}
 	
-	public Guide findGuideByAttractionId(int attractionId) {
-		List<Guide> guidelist = guideRepository.findByAttractionIdOderByCommentDesc(attractionId);
+	public Guide findGuideByAttractionId(long attractionId) {
+		List<Guide> guidelist = guideRepository.findByAttractionIdOrderByCommentDesc(attractionId);
 		if(guidelist.size()==0)
 			return null;
 		else
 			return guidelist.get(0);
 	}
+
+	public List<Guide> findGuideByAttractionIdInOrder(long attractionId) {
+		return guideRepository.findByAttractionIdOrderByCommentDesc(attractionId);
+	}
+
+	public Guide findGuideById(long id) {
+		return guideRepository.findById(id);
+	}
+	
 }

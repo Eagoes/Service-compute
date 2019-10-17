@@ -12,5 +12,7 @@ import com.service.client.model.*;
 public interface GuideRepository extends JpaRepository<Guide, Long> {
 
 	@Query(value = "select * from guides where guideAttractionId = ?1 order by guideComment", nativeQuery = true)
-	public List<Guide> findByAttractionIdOderByCommentDesc(int attractionId);
+	public List<Guide> findByAttractionIdOrderByCommentDesc(long attractionId);
+
+	public Guide findById(long id);
 }

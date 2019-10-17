@@ -22,10 +22,11 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "hotels")
 public class Hotel {
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "hotelId")
+    @NotNull(message = "*please offer hotel id")
     private long id;
     
     @Column(name = "hotelName")

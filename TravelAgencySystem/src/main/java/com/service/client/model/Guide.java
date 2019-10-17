@@ -20,10 +20,11 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "guides")
 public class Guide {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "guideId")
+    @NotNull(message = "*Please provide guide id")
     private long id;
     
     @Column(name = "guideGender")

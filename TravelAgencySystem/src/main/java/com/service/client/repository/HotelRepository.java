@@ -11,4 +11,9 @@ import com.service.client.model.*;
 public interface HotelRepository extends JpaRepository<Hotel, Long> {
 
 	public List<Hotel> findByHotelCityOrderByHotelPriceAsc(String hotelCity);
+	
+	public List<Hotel> findByHotelCityOrderByHotelStar(String hotelCity);
+
+	public Hotel findById(long id);
+	
 }

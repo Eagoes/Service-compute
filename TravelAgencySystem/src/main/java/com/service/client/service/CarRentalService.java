@@ -32,4 +32,20 @@ public class CarRentalService {
 		else
 			return carlist.get(0);
 	}
+	
+	public CarRental findBestCarByCity(String rentalLoc,String returnLoc) {
+		List<CarRental> carlist = carRentalRepository.findByRentalLocAndReturnLocOrderByCarPriceDesc(rentalLoc,returnLoc);
+		if(carlist.size()==0)
+			return null;
+		else
+			return carlist.get(0);
+	}
+
+	public List<CarRental> findCarByCityInOrder(String rentalLoc, String returnLoc) {
+		return carRentalRepository.findByRentalLocAndReturnLocOrderByCarPriceAsc(rentalLoc,returnLoc);
+	}
+
+	public CarRental findCarById(long id) {
+		return carRentalRepository.findById(id);
+	}
 }
