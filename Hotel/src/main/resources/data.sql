@@ -1,1 +1,4 @@
-replace into `hotels`(hotelId,hotelName,hotelPhone,hotelState,hotelCity,hotelAddress,appintmentTime,hotelRemaining,hotelStar,hotelComment,hotelPrice) values(67,"Home Inn","6767","Beijing","Beijing","Haidian","2018-12-12",5,9,100,3);
+replace into `hotels`(hotelId,hotelName,hotelPhone,hotelState,hotelCity,hotelAddress,appintmentTime,hotelRemaining,hotelStar,hotelComment,hotelPrice) values(67,"Home Inn","6767","BeiJing","BeiJing","Haidian","2019-12-12",5,9,100,3);
+replace into `hotels`(hotelId,hotelName,hotelPhone,hotelState,hotelCity,hotelAddress,appintmentTime,hotelRemaining,hotelStar,hotelComment,hotelPrice) values(1,"Home Inn","6767","BeiJing","BeiJing","Haidian","2019-12-12",5,9,100,3);
+replace into `hotels`(hotelId,hotelName,hotelPhone,hotelState,hotelCity,hotelAddress,appintmentTime,hotelRemaining,hotelStar,hotelComment,hotelPrice) values(2,"Home Inn","6767","BeiJing","BeiJing","Haidian","2019-12-12",5,9,100,3);
+replace into `hotels`(hotelId,hotelName,hotelPhone,hotelState,hotelCity,hotelAddress,appintmentTime,hotelRemaining,hotelStar,hotelComment,hotelPrice) values(3,"Home Inn","6767","BeiJing","BeiJing","Haidian","2019-12-12",5,9,100,3);

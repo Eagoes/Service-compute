@@ -1,1 +1,5 @@
-replace into `car_rental`(carPlate,carBrand,carName,cartype,rentalLoc,returnLoc,carRemaining,carPrice) values("Jing-AL0000","BMW","C300L",0,"Beijing","Beijing",5,300);
+replace into `car_rental`(carId,carPlate,carBrand,carName,cartype,rentalLoc,returnLoc,carRemaining,carPrice) values(1,"Jing-AL0000","BMW","BMW1",0,"BeiJing","BeiJing",5,300);
+replace into `car_rental`(carId,carPlate,carBrand,carName,cartype,rentalLoc,returnLoc,carRemaining,carPrice) values(2,"Jing-AL0001","Benz","Benz1",0,"BeiJing","BeiJing",5,300);
+replace into `car_rental`(carId,carPlate,carBrand,carName,cartype,rentalLoc,returnLoc,carRemaining,carPrice) values(3,"Jing-AL0002","Audi","Audi1",0,"BeiJing","BeiJing",5,300);
+replace into `car_rental`(carId,carPlate,carBrand,carName,cartype,rentalLoc,returnLoc,carRemaining,carPrice) values(4,"Jing-AL0003","BMW","BMW2",0,"BeiJing","BeiJing",5,300);
+replace into `car_rental`(carId,carPlate,carBrand,carName,cartype,rentalLoc,returnLoc,carRemaining,carPrice) values(5,"Jing-AL0004","BMW","BMW3",0,"BeiJing","BeiJing",5,300);
