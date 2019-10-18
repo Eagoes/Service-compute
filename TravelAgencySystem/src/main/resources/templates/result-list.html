@@ -6,13 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Advice For User BY Travel-proxy</title>
 
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"
         id="bootstrap-css">
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" th:href=@{/css/table.css} href="../static/css/table.css" />
     <script src="js/table.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#result-table').DataTable();
+        });
+    </script>
 </head>
 
 <body>
@@ -32,7 +39,7 @@
                 <input type="text" class="form-control" id="task-table-filter" data-action="filter"
                     data-filters="#task-table" placeholder="Filter Tasks" />
             </div>
-            <table class="table table-hover" id="task-table">
+            <table class="table table-hover table-striped table-bordered table-sm" id="result-table">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -43,30 +50,22 @@
                         <th>Attraction</th>
                         <th>Guide</th>
                         <th>Cost</th>
+                        <th>Link</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th>1</th>
-                        <th>AL001</th>
-                        <th>Al002</th>
-                        <th>Hotel</th>
-                        <th>Car</th>
-                        <th>Attr</th>
-                        <th>Guide</th>
-                        <th>100</th>
-                    </tr>
-                    <tr th:each="result : ${resultList}" th:onclick="location.href = @{/usr-result(departureAirlineId=${result.getDepartureAirlineId},
-                    returnAirlineId=${result.getReturnAirlineId()}, hotelId=${result.getHotelId()}, carId=${result.getCarId()},
-                    attractionId=${result.getAttractionId()}, guideId=${result.getGuideId()})}">
-                        <th th:text="${result.getDepartureAirlineName()}">2</th>
+                    <tr th:each="result, resultStat : ${resultList}">
+                        <th th:text="${resultStat.count}">1</th>
                         <th th:text="${result.getDepartureAirlineName()}">AL001</th>
                         <th th:text="${result.getReturnAirlineName()}">Al002</th>
                         <th th:text="${result.getHotelName()}">Hotel</th>
-                        <th th:text="${result.getCarName()}">Car</th>
+                        <th th:text="${result.getCarRentalName()}">Car</th>
                         <th th:text="${result.getAttractionName()}">Attr</th>
                         <th th:text="${result.getGuideName()}">Guide</th>
                         <th th:text="${result.getCost()}">200</th>
+                        <th><a th:href="@{/usr-result.html(departureAirlineId=${result.getDepartureAirlineId()},
+                    returnAirlineId=${result.getReturnAirlineId()}, hotelId=${result.getHotelId()}, carRentalId=${result.getCarRentalId()},
+                    attractionId=${result.getAttractionId()}, guideId=${result.getGuideId()})}">link</a></th>
                     </tr>
                 </tbody>
             </table>
